@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taco - My Lovely Dog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="paw-print">&#128062;</div>
+    <h1>Taco</h1>
+    <p class="subtitle">My Best Family Member</p>
+  </header>
+
+  <nav class="tab-nav">
+    <button class="tab-btn active" data-tab="home">首页</button>
+    <button class="tab-btn" data-tab="stories">故事</button>
+    <button class="tab-btn" data-tab="puppy">小时候</button>
+    <button class="tab-btn" data-tab="grownup">长大了</button>
+  </nav>
+
+  <main>
+    <!-- Home Tab -->
+    <section class="tab-content active" id="home">
+      <div class="profile">
+        <div class="profile-card">
+          <div class="profile-photo" id="profilePhoto">
+            <span class="placeholder-icon">&#128054;</span>
+            <p>Click to set profile photo</p>
+          </div>
+          <div class="profile-info">
+            <h2>About Taco</h2>
+            <ul>
+              <li><strong>Name:</strong> <span contenteditable="true" class="editable">Taco</span></li>
+              <li><strong>Breed:</strong> <span contenteditable="true" class="editable">Click to edit</span></li>
+              <li><strong>Age:</strong> <span contenteditable="true" class="editable">Click to edit</span></li>
+              <li><strong>Favorite Thing:</strong> <span contenteditable="true" class="editable">Click to edit</span></li>
+              <li><strong>Personality:</strong> <span contenteditable="true" class="editable">Click to edit</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery">
+        <h2>Photo Gallery</h2>
+        <div class="upload-area" data-gallery="home">
+          <span class="upload-icon">&#128247;</span>
+          <p>Drag photos here or click to upload</p>
+          <input type="file" class="file-input" multiple accept="image/*" hidden>
+        </div>
+        <div class="photo-grid" data-gallery="home"></div>
+      </div>
+    </section>
+
+    <!-- Stories Tab -->
+    <section class="tab-content" id="stories">
+      <h2 class="section-title">Taco's Stories</h2>
+      <div class="story-form">
+        <input type="text" id="storyTitle" class="story-input" placeholder="Story title...">
+        <textarea id="storyBody" class="story-textarea" placeholder="Write a story about Taco..." rows="4"></textarea>
+        <button id="addStoryBtn" class="story-submit">Add Story</button>
+      </div>
+      <div class="story-list" id="storyList"></div>
+    </section>
+
+    <!-- Puppy Tab -->
+    <section class="tab-content" id="puppy">
+      <div class="gallery">
+        <h2>Puppy Photos</h2>
+        <div class="upload-area" data-gallery="puppy">
+          <span class="upload-icon">&#128247;</span>
+          <p>Drag photos here or click to upload</p>
+          <input type="file" class="file-input" multiple accept="image/*" hidden>
+        </div>
+        <div class="photo-grid" data-gallery="puppy"></div>
+      </div>
+    </section>
+
+    <!-- Grown Up Tab -->
+    <section class="tab-content" id="grownup">
+      <div class="gallery">
+        <h2>Grown Up Photos</h2>
+        <div class="upload-area" data-gallery="grownup">
+          <span class="upload-icon">&#128247;</span>
+          <p>Drag photos here or click to upload</p>
+          <input type="file" class="file-input" multiple accept="image/*" hidden>
+        </div>
+        <div class="photo-grid" data-gallery="grownup"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox for viewing photos -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev">&#8249;</button>
+    <img src="" alt="Taco" id="lightboxImg">
+    <button class="lightbox-nav lightbox-next" id="lightboxNext">&#8250;</button>
+  </div>
+
+  <footer>
+    <p>Made with &#10084;&#65039; for Taco</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
